@@ -36,6 +36,11 @@ body {
     height: 500px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     position: relative;
+    transition: transform 0.5s ease-in-out;
+  }
+  .pastry:hover {
+    transform: scale(1.1);
+  }
   
     figure {
         width: 190px;
@@ -55,7 +60,7 @@ body {
         margin-top: 10px;
       }
     }
-  }
+  
   .recipe-button {
     background-color: $brown;
     color: #f5f0e6;
