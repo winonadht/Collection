@@ -64,28 +64,3 @@ tab.forEach((pastryData) => {
     const pastry = createPastry(pastryData.name, pastryData.imagePath, pastryData.creator, pastryData.year, pastryData.country, pastryData.lien,);
     addPastryToCollection(pastry);
 });
-
-// Sélectionnez toutes les cartes de pâtisserie
-let pastryCards = document.querySelectorAll('.pastry');
-
-// Ajoutez un écouteur d'événement à chaque carte
-pastryCards.forEach((card) => {
-  card.addEventListener('mouseenter', handleCardHover);
-  card.addEventListener('mouseleave', handleCardLeave);
-});
-
-// Fonction appelée lorsque la souris survole une carte
-function handleCardHover(event) {
-  const card = event.currentTarget;
-
-  // Appliquer un effet de zoom
-  card.style.transform = 'scale(1.1)';
-}
-
-// Fonction appelée lorsque la souris quitte une carte
-function handleCardLeave(event) {
-  const card = event.currentTarget;
-
-  // Réinitialiser le zoom
-  card.style.transform = 'scale(1)';
-}
